@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
   width: 100%;
@@ -11,18 +16,24 @@ body {
 }
 
 .card {
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  height: 375px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(black, .15);
+  height: 362px;
   width: 350px;
-  z-index: 9999;
+  z-index: 1;
 }
 
-.topCircle {
+.card-bg {
+  overflow: hidden;
+}
+
+#top-circle {
   position: absolute;
   top: -65%;
   left: -18%;
@@ -32,4 +43,42 @@ body {
   position: absolute;
   bottom: -72%;
   right: -18%;
+}
+
+#face {
+  border-radius: 50%;
+  border: 5px solid white;
+  transform: translate(114%, -50%);
+}
+
+.ctop {
+  z-index: 99;
+}
+
+.cfooter {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.metric-group {
+  text-align: center;
+}
+
+.quantity, .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.age, .place, .type {
+  font-size: 12px;
+  color: grey;
+}
+
+.name {
+  transform: translateY(10%);
+}
+
+.place {
+  text-align: center;
 }
